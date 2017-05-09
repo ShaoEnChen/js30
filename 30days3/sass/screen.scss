@@ -1,0 +1,101 @@
+@import "compass/reset";
+
+$slider-height: 30px;
+$slider-color: #e74c3c;
+
+$track-width: 400px;
+$track-height: 10px;
+$track-color: #bdc3c7;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin thumb() {
+  -webkit-appearance: none;
+  width: $slider-height;
+  height: $slider-height;
+  background: $slider-color;
+  border: none;
+  @include border-radius(50%);
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover,
+  &:active {
+    @include thumb_active();
+  }
+}
+
+@mixin thumb_active() {
+  -webkit-transform: scale(1.2);
+}
+
+@mixin track() {
+  width: $track-width;
+  height: $track-height;
+  background: $track-color;
+}
+
+html {
+  text-align: center;
+}
+
+.control-bar {
+  margin: 20px 0;
+}
+
+input[type="range"] {
+  & {
+    -webkit-appearance: none;
+  }
+
+  @include track();
+  @include border-radius($track-height / 2);
+  outline: 0;
+
+  &::-webkit-slider-thumb {
+    @include thumb();
+  }
+
+  &::-moz-range-thumb {
+    @include thumb();
+  }
+
+  &::-moz-range-track {
+    @include track();
+  }
+
+  &::-moz-range-progress {
+    height: $track-height;
+    background: $slider-color;
+  }
+
+  &::-moz-focus-outer {
+    border: none;	// remove :focus border
+  }
+
+  &::-ms-thumb {
+    @include thumb();
+  }
+
+  &::-ms-track {
+    @include track();
+  }
+
+  &::-ms-fill-lower {
+    background: $slider-color;
+  }
+
+  &::-ms-fill-upper {
+    background: $track-color;
+  }
+}
+
+#image {
+  margin: 50px;
+  width: 500px;
+  height: 500px;
+}

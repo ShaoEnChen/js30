@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyboard Drum Set</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="drumset">
+        <div class="btn" data-key="65">
+            <kbd class="key">A</kbd>
+        </div>
+        <div class="btn" data-key="83">
+            <kbd class="key">S</kbd>
+        </div>
+        <div class="btn" data-key="68">
+            <kbd class="key">D</kbd>
+        </div>
+        <div class="btn" data-key="70">
+            <kbd class="key">F</kbd>
+        </div>
+        <div class="btn" data-key="71">
+            <kbd class="key">G</kbd>
+        </div>
+        <div class="btn" data-key="72">
+            <kbd class="key">H</kbd>
+        </div>
+        <div class="btn" data-key="74">
+            <kbd class="key">J</kbd>
+        </div>
+        <div class="btn" data-key="75">
+            <kbd class="key">K</kbd>
+        </div>
+        <div class="btn" data-key="76">
+            <kbd class="key">L</kbd>
+        </div>
+    </div>
+
+    <audio data-key="65" src="audio/boom.wav"></audio>
+    <audio data-key="83" src="audio/clap.wav"></audio>
+    <audio data-key="68" src="audio/hihat.wav"></audio>
+    <audio data-key="70" src="audio/kick.wav"></audio>
+    <audio data-key="71" src="audio/openhat.wav"></audio>
+    <audio data-key="72" src="audio/ride.wav"></audio>
+    <audio data-key="74" src="audio/snare.wav"></audio>
+    <audio data-key="75" src="audio/tink.wav"></audio>
+    <audio data-key="76" src="audio/tom.wav"></audio>
+
+    <script src="dist/main.js"></script>
+</body>
+</html>

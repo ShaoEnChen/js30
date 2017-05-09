@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Variables</title>
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+    <link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+</head>
+<body>
+    <div class="control-bar">
+        <input id="range-border" type="range" name="border" min="0" max="100" step="1" value="0" data-unit="px">
+    </div>
+    <div class="control-bar">
+        <input id="range-blur" type="range" name="blur" min="0" max="25" step="1" value="15" data-unit="px">
+    </div>
+    <div>
+        <input id="bg-color" type="color" name="bg-color" value="#ffffff">
+    </div>
+    <img id="image" src="images/night.jpg" alt="">
+    <script src="dist/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+body {
+    background: #000;
+}
+
+#drumset {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+kbd {
+    font-size: 48px;
+    color: lightseagreen;
+}
+
+.playing kbd {
+    color: gold;
+}
